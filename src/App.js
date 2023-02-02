@@ -20,6 +20,7 @@ import './App.css';
 import NotesList from "./components/NotesList";
 import NotFound from "./components/NotFound";
 import Navbar from "./components/Navbar";
+import AddNote from "./components/AddNote";
 
 function App() {
     return (
@@ -28,8 +29,9 @@ function App() {
                 <Navbar />
                 <div>
                     <Routes>
-                    <Route path="/" element={<NotesList/>} />
-                    <Route path="/*" element={<NotFound/>} />
+                        <Route exact path="/" element={<NotesList/>} />
+                        <Route path="/*" element={<NotFound/>} />
+                        <Route path="/add" element={<AddNote/>} />
                     </Routes>
                 </div>
             </div>

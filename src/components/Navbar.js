@@ -8,10 +8,10 @@ const Navbar=()=>{
                 <h2 className="text-danger">Notes App</h2>
                 </div>
                 <div className="col">
-                <Link to="/>">Home</Link>
+                <Link to="/">Home</Link>
                 </div>
                 <div className="col">
-                <Link to="#" className="m-3">New Note</Link>
+                <Link to="/add" className="m-3">New Note</Link>
                 </div>
         </nav>
         </div>
