@@ -21,6 +21,7 @@ import NotesList from "./components/NotesList";
 import NotFound from "./components/NotFound";
 import Navbar from "./components/Navbar";
 import AddNote from "./components/AddNote";
+import NoteDetails from "./components/NoteDetails";
 
 function App() {
     return (
@@ -31,7 +32,9 @@ function App() {
                     <Routes>
                         <Route exact path="/" element={<NotesList/>} />
                         <Route path="/*" element={<NotFound/>} />
+                        <Route path="/notes/edit/:id" element={<AddNote/>} />
                         <Route path="/add" element={<AddNote/>} />
+                        <Route path="/notes/:id" element={<NoteDetails/>} />
                     </Routes>
                 </div>
             </div>

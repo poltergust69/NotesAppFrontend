@@ -55,21 +55,21 @@ const NotesList = () => {
     }, []);
 
     return (
-        <div className="container-sm mt-5">
+        <div className="container-sm mt-5 text-center">
             <div className="container-sm">
-            <h4>List of Notes</h4>
-            <div className="notes-list mt-4">
-            {
-                notes && notes.map(note => (
-                    <div key={note.id} className="bg-light mt-3 pt-3 pb-3">
-                        <Link to="#">
-                            <h5 className="text-danger text-capitalize pt-3 pb-3">{note.title}</h5>
-                            <p>{note.body}</p>
-                        </Link>
+                <h2>List of Notes</h2>
+                    <div className="notes-list mt-4">
+                    {
+                        notes && notes.map(note => (
+                            <div key={note.id} className="bg-light mt-3 pt-3 pb-3">
+                                <Link to={`/notes/${note.id}`}>
+                                    <h5 className="text-danger text-capitalize pt-3 pb-3">{note.title}</h5>
+                                    <p>{note.body}</p>
+                                </Link>
+                            </div>
+                        ))
+                    }
                     </div>
-                ))
-            }
-            </div>
             </div>
         </div>
     );

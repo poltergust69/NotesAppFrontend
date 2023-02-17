@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 const Navbar=()=>{
     return (
-        <div className="container small">
+        <div className="container small bg-success">
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
                 <div className="col">
                 <h2 className="text-danger">Notes App</h2>
